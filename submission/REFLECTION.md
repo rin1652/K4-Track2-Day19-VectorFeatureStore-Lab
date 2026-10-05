@@ -16,7 +16,8 @@
 - **Paraphrase queries**: Vector (Semantic) thắng vì không có từ khóa trùng lặp trực tiếp, thuật toán cần hiểu ngữ nghĩa trừu tượng (với Docker path dùng `bge-m3`, hiệu quả tiếng Việt cực kỳ rõ rệt).
 - **Mixed queries**: Hybrid (RRF) thắng tuyệt đối vì tận dụng được thế mạnh của cả việc bắt từ khóa chính xác và suy luận ngữ nghĩa của các từ diễn đạt lại.
 
-**Không dùng hybrid khi**: 
+**Không dùng hybrid khi**:
+
 1. Hệ thống có yêu cầu cực kỳ khắt khe về độ trễ (latency < 5ms) hoặc chi phí hạ tầng thấp.
 2. Dữ liệu tìm kiếm thiên hoàn toàn về tra cứu mã số, ID, tên riêng chính xác (lúc này pure BM25 hoặc exact match database là đủ).
 
